@@ -1,0 +1,138 @@
+
+/* Navigation Bar */
+#topNav {
+	background-color: #222222;
+}
+
+#topNav button{
+	color: white;
+}
+
+#navbar-nav a{
+	color: #fff;
+}
+
+#navbar-nav a:hover{
+	color: #00AAE4;
+}
+
+
+body {
+	background: #fff;
+
+}
+
+/* Superior Section */
+#topTitle{
+	margin-top: 20px;
+}
+
+#logounam{
+	margin-top: 5px;
+	max-width: 20%;
+  	height: auto;
+}
+
+#logofi{
+	margin-top: 20px;
+	margin-right: 28px;
+  	max-width: 15%;
+  	height: auto;
+}
+
+.description{
+	margin-left: 30px;	
+	margin-top: 70px;
+	color:#000
+}
+
+#descriptiontxt{
+	padding-top: 30px;
+	padding-right: 28px;
+	text-align: justify;
+  	text-justify: inter-word;
+}
+
+#entrytxt{
+	opacity: .5;
+	margin-left: 30px;	
+	margin-top: 100px;
+}
+
+
+#cover-caption {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#formtitle{
+	color:#000
+}
+
+#placeholder{
+	text-align: center;
+}
+
+.btn-toolbar{
+	background-color: white;
+}
+
+.btn-primary{
+	margin-left: 20px;
+}
+
+
+/* Results Sections */
+
+#resultContainer{
+	width: 100%;
+}
+#resultTitle{
+	opacity: .5;
+	margin-left: 30px;	
+	margin-top: 20px;
+}
+
+#resultTxt{
+	border-radius: 15px;
+	border: 3px solid #D9D9D9;
+	padding: 10px;
+	width: 400px;
+	height: 150px;
+	display: table;
+	margin: 0 auto;
+}
+
+
+/* Top footer */
+#footerbg{
+	margin-top: 150px;
+	background-color: #222222;
+}
+
+h5{
+	color: white;
+}
+
+.footertxt{
+	color: white;
+}
+
+/* Bottom footer */
+#footer{
+
+	background-color: #181818;
+}
+
+#copyright{
+	color: white;
+}
+
+#manualTitle{
+	margin-top: 50px;
+}
+
+#manualTxt{
+	text-align: center;
+}

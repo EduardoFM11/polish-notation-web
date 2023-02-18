@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Proyecto Notación Polaca</title>
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+
+	<!-- Scripts necesarios para que los componentes de Bootstrap funcionen correctamente -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Script para que cuando se actualice página los resultados sean eliminados -->
+	<script>
+	if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);}
+	</script>
+	
+	<nav class="navbar navbar-expand-lg navbar-dark" id="topNav">
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" id="btnToggler">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+			<ul class="navbar-nav ml-auto mt-2 mt-lg-0" id="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/Manual">Manual de Usuario</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	{% block content %}
+	{% endblock %}
+
+	<!-- Footer -->
+	<footer class="page-footer font-small teal pt-4"id="footerbg">
+
+		<!-- Footer Text -->
+		<div class="container-fluid text-center text-md-left" >
+
+			<!-- Grid row -->
+			<div class="row" >
+
+				<!-- Grid column -->
+				<div class="col-md-6 mt-md-0 mt-3">
+
+					<!-- Content -->
+					<h5 class="text-uppercase font-weight-bold">Estructuras Discretas</h5>
+					<div>
+						<p class="footertxt">Estructuras Discretas<br>
+							Grupo: 07<br>
+							Proyecto 3 "Notación Polaca"<br>
+						Semestre 2020-2</p>
+					</div>
+					
+
+				</div>
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none pb-3">
+
+				<!-- Grid column -->
+				<div class="col-md-6 mb-md-0 mb-3">
+
+					<!-- Content -->
+					<h5 class="text-uppercase font-weight-bold">Equipo 5</h5>
+					<p class="footertxt">Fong Morales Eduardo<br>
+							Galán Galván Arturo David<br>
+							Martínez Paredes Eric<br>
+						Luna Carrillo André Fabian<br>
+						Ortega Mena Rafael Uriel</p>
+
+				</div>
+				<!-- Grid column -->
+
+			</div>
+			<!-- Grid row -->
+
+		</div>
+		<!-- Footer Text -->
+
+		<!-- Copyright -->
+		<div id="footer"class="footer-copyright text-center py-3">
+			<p id="copyright">© 2020 Copyright: Equipo 5 </p>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!-- Permite ingresar html que es reutilizable-->
+{% extends "layout.html" %} 
+
+<!-- Indica el inicio del html unico para landing -->
+{% block content %}
+
+<div class="responsive">
+	<img src="{{url_for('static', filename='images/logounam.png')}}" class="rounded float-left" width="200" height="200" id="logounam">
+	<img src="{{url_for('static', filename='images/logofi.png')}}" class="rounded float-right" width="150" height="150" id="logofi">
+</div>
+
+<div>
+	<p style="font-size:2vw;" class="text-center" id="topTitle">Universidad Nacional Autónoma de México</p>
+	<p style="font-size:2vw;" class="text-center">Facultad de Ingeniería</p>
+	<p style="font-size:2vw;" class="text-center">Estructuras Discretas</p>
+	<p style="font-size:2vw;" class="text-center">Grupo 07</p>
+</div>
+
+
+<div class="description">
+	<p class="text-left" style="font-size:2vw;"><b>Descripción del programa</b></p>	
+	<p style="font-size:2vw;" id="descriptiontxt">Utiliza este programa para convertir una expresión en notación infija a una expresión prefija o una expresión postfija. La expresión a ingresar debe contener espacios entre cada elemento p. ej. ( A + B ) * C. Utiliza los dos botones para elegir la conversión que estás buscando, el resultado se despliega en la caja de resultados.
+	Si tienes más dudas consulta el manual de usuario en la barra de navegación superior. </p>
+</div>
+
+<div class="entry">
+	<p class="text-left" id= "entrytxt" style="font-size:3vw;">Entrada</p>	
+</div>
+
+    <div id="cover-caption">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                    <div class="px-2">
+                        <!-- Contiene el formulario que hace la solicitud al index.py para procesar la entrada.
+                        Mediante method="POST" indicamos que este formulario contiene una accion que requiere ser atendida -->
+                        <form method= "POST" class="justify-content-center">
+                                <p class="text-center" id="formtitle"style="font-size:2vw;">Ingresa la expresión infija</p>	<br><br>
+                                <input id="placeholder" type="text" name="expression" placeholder="p. ej. ( A + B ) * C" autocomplete="off"><br><br>
+                            <div class="text-center">
+                            	<div class ="d-inline-block bg-danger">
+	                           		<div class="btn-toolbar mx-auto" role="toobar">
+	                            		<div class="btn-toolbar">
+                                            <!-- Se da una etiqueta a cada boton mediante value="" de esta forma sabemos de que boton proviene la acción-->
+                                			<button class="btn btn-primary" type="submit" name="action" value="pre">Expresión prefija</button>
+                                			<button class="btn btn-primary" type="submit" name="action" value="pos">Expresión postfija</button>
+                            			</div>
+		                            </div>
+
+	                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="result">
+	<p class="text-left" id= "resultTitle" style="font-size:3vw;">Resultado</p>	
+</div>
+
+<div class="container" id="resultContainer">
+	<p class="text-center" id= "resultTxt" >La expresión original es: {{original}}<br>El resultado en {{conversion}} es: {{resultado}}</p>
+</div>
+
+{% endblock %}
+<!-- Indica el fin del html unico para landing -->

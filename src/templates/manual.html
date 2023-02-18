@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div>
+	<p class="text-center" id= "manualTitle" style="font-size:3vw;"><b>Manual de Usuario</b></p>
+</div>
+
+<div id="manualTxt">
+	<p style="font-size:2vw;">En el siguiente link encontrarás el PDF donde puedes consultar como hacer uso de este programa. </p>
+
+	<a class="text-center" href= "{{url_for('static', filename='Manual de Usuario.pdf')}}" target="_blank" type="application/pdf"> Ver PDF </a>
+</div>
+
+
+{% endblock %}
